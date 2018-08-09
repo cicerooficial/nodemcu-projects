@@ -1,7 +1,9 @@
 ## ESP8266 NodeMCU Projects
 `EN`
 
-How to run the codes of this repository with Arduino IDE:
+This repository brings examples of codes and projects developed during my workshops at Fab Lab Livre SP with NodeMCU/ESP8266.
+
+#### How to run/upload the codes with Arduino IDE:
 1. Download the Arduino IDE on https://www.arduino.cc/en/Main/Software
 2. With the Arduino IDE installed, go to "File > Preferences" and paste the following line on "Additional Boards Manager URLs": http://arduino.esp8266.com/stable/package_esp8266com_index.json
 3. Go to "Tools > Board: (NameOfTheBoard) > Boards Manager", search for "esp8266" and install the package "esp8266 by ESP8266 Community".
