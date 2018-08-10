@@ -1,7 +1,7 @@
 ## ESP8266 NodeMCU Projects
 `EN`
 
-This repository brings examples of codes and projects developed during my workshops at Fab Lab Livre SP with NodeMCU/ESP8266.
+This repository brings codes and projects developed with NodeMCU/ESP8266 during my workshops at Fab Lab Livre SP.
 
 #### How to run/upload the codes with Arduino IDE:
 1. Download the Arduino IDE on https://www.arduino.cc/en/Main/Software
