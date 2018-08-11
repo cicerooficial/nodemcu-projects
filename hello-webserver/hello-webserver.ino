@@ -1,4 +1,7 @@
 #include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+
+ESP8266WebServer servidor;
 
 char* id_rede = "nomedarede";
 char* senha_rede = "senhadarede";
@@ -24,8 +27,15 @@ void setup() {
   Serial.println("");
   Serial.println("Dispositivo conectado.");
   Serial.println(WiFi.localIP());
+
+  //adiciona rota ao servidor
+  servidor.on("/", [](){
+    servidor.send(200, "text/plain", "Hello World! :)");
+  });
+
+  servidor.begin();
 }
 
 void loop() {
-
+  servidor.handleClient();
 }
