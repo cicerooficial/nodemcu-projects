@@ -7,7 +7,9 @@ char* id_rede = "nomedarede";
 char* senha_rede = "senhadarede";
 
 void setup() {
-  pinMode(16, OUTPUT);
+  pinMode(2, OUTPUT);
+  //garante que o LED inicie desligado
+  digitalWrite(2, HIGH);
   Serial.begin(115200);
 
   WiFi.begin(id_rede, senha_rede);
@@ -29,15 +31,16 @@ void setup() {
   Serial.println("Dispositivo conectado.");
   Serial.println(WiFi.localIP());
 
-  //adiciona rota ao servidor
+  //adiciona rotas ao servidor
   servidor.on("/", [](){
     servidor.send(200, "text/plain", "Hello World! :)");
   });
 
-  servidor.on("/toggleLED", [](){
-    digitalWrite(16, !digitalRead(16));
-    Serial.println(digitalRead(16));
-    servidor.send(200, "text/plain", digitalRead(16) ? "LED DESLIGADO!" : "LED LIGADO!");
+  servidor.on("/alteraLED", [](){
+    //altera o estado do LED para o contrário da leitura atual
+    //ou seja: se estiver ligado, desliga (e vice-versa)
+    digitalWrite(2, !digitalRead(2));
+    servidor.send(200, "text/plain", digitalRead(2) ? "LED DESLIGADO!" : "LED LIGADO!");
   });
 
   servidor.begin();
