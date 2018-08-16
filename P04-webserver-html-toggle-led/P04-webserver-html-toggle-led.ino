@@ -14,11 +14,19 @@ char* senha_rede = "senhadarede";
 char paginaweb[] PROGMEM = R"=====(
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet'> 
+    <style>
+      body {background-color:#efefef;font-family:'Share Tech Mono', monospace;}
+      a {text-decoration:none;}
+      #box {position:absolute;top:50%;left:50%;max-width:50%;transform:translate(-50%,-60%);-webkit-transform:translate(-50%,-60%);-ms-transform:translate(-50%,-60%);}
+      #alteraLED {font-size:14px;background-color:#EB9532;padding:10px 20px;font-weight:800;text-align:center;letter-spacing:-2px;color:#fff;}
+    </style>
   </head>
   <body>
-    <form action='alteraLED'>
-      <button>ALTERAR LED</button>
-    </form>
+    <div id='box'>
+      <h1>Hi, this is an interface to control NodeMCU through a Web Server.</h1>
+      <a href='/alteraLED'><div id="alteraLED">TOGGLE LED</div></a>
+    </div>
   </body>
 </html>
 )=====";
