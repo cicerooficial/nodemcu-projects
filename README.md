@@ -3,6 +3,8 @@
 
 This repository brings codes and projects developed with NodeMCU/ESP8266 during my workshops at Fab Lab Livre SP.
 
+![sample image](https://github.com/yurialeksndr/nodemcu-projects/blob/master/P05-webserver-html-ajax-toggle-led/img/sample01.png)
+
 #### How to run/upload the codes with Arduino IDE:
 1. Download the Arduino IDE on https://www.arduino.cc/en/Main/Software
 2. With the Arduino IDE installed, go to "File > Preferences" and paste the following line on "Additional Boards Manager URLs": http://arduino.esp8266.com/stable/package_esp8266com_index.json
